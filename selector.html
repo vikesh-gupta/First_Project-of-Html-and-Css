@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+
+    
+
+    
+Universal selector (Universal Selector is convenient when you want to set a style for of all the elements of an HTML page).
+*{
+   background-color: aqua;
+}
+
+
+<div>
+    <ul>
+        <li class="bg-black">Inside selector</li>
+        <li class="text-white">Inside selector</li>
+        <li class="bg-black text-white">Selector tutorials</li>
+    </ul>
+</div>
+
+
+Individual selector (The element selector chooses one or more HTML elements of the same name).
+
+p{
+  background-color: aqua;
+}
+
+<p>Inside selector</p>
+<p>Selector tutorials</p>
+
+Class (In css class(.)selector chooses the elements with a identify class attribute. we can create multiple class for an element).
+
+.{
+  background-color: aqua;
+}
+
+
+<div class="bg-black">
+    <ul>
+        <li>Inside selector</li>
+        <li>Inside selector</li>
+        <li>Selector tutorials</li>
+    </ul>
+</div>
+
+ID (In css id selector is used to style the element with specified id attribute. Only one ID we can create for an element).
+
+#{
+  background-color: aqua;
+  }
+
+  <div  id="bg-black">
+    <ul>
+        <li>Inside selector</li>
+        <li>Selector tutorials</li>
+         
+    </ul>
+</div>
+
+Chained selector (Chained selector is like a checking of condition, when condition meets then style will be applied to that element. In below example style will be applied to LI when both classes will be available for LI, if any of these class will be missing style will not be applicable (bg-black.text-white)).
+
+li.bg-black.text-white{
+  background-color: aqua;
+
+}
+
+<div>
+    <ul>
+        <li class="bg-black">Inside selector</li>
+        <li class="text-white">Inside selector</li>
+        <li class="bg-black text-white">Selector tutorials</li>
+    </ul>
+</div>
+
+
+
+Combined selector (Combined selector means  styling  two or more an element just by separting comma(,) this is just like & operator. In below exmaple we are applying style to span as well as li).
+
+span, li{
+  background-color: aqua;
+
+}
+
+
+    <ul>
+        <li>Inside selector</li>
+        <li>Selector tutorials</li>
+    </ul>
+    <span>Selector tutorials-1</span>
+    <span>Selector tutorials-2</span>
+
+Inside selector (Inside selector means checking the conditions, if all condition meets then style will be apply. In below example, its saying there should be DIV, inside DIV there should be UL, inside UL there should be LI then background-color: aqua; will be applied, Otherwise background-color: aqua; will not be applied).
+
+div ul li {
+  background-color: aqua;
+}
+  <div>
+    <li>Selector tutorials</li>
+    <ul>
+        <li>Inside selector</li>
+    </ul>
+  </div>
+
+  OUTPUT--Inside selector
+
+
+direct child selector (direct child selector means styling the child element which is just next to the parent).
+div > li {
+  background-color: aqua;
+}
+
+<div>
+    <li>Selector tutorials</li>
+    <ul>
+        <li>Inside selector</li>
+    </ul>
+  </div>
+
+OUTPUT--Selector tutorials
+
+
+sibling ~ or + (sibling selector means styling only siblings of an element except him. + operatior will style just one sibling which is just next to him and ~ operator will style all the siblings).
+
+.sibling + {
+    background-color: aqua;
+}
+
+
+    <p class="sibling">Selector tutorials-1</p>
+    <p>Inside selector-1</p>
+    <p>Selector tutorials-2</p>
+    <p>Inside selector-2</p>
+    <p>Selector tutorials-3</p>
+    <p>Inside selector-3</p>
+
+    OUTPUT--Inside selector-1
+
+
+.sibling ~ {
+    background-color: aqua;
+   
+}
+
+<p class="sibling">Selector tutorials-1</p>
+<p>Inside selector-1</p>
+<p>Selector tutorials-2</p>
+<p>Inside selector-2</p>
+<p>Selector tutorials-3</p>
+<p>Inside selector-3</p>
+
+OUTPUT--
+Inside selector-1
+Selector tutorials-2
+Inside selector-2
+Selector tutorials-3
+Inside selector-3
+
+
+
+  </body>
+</html>
